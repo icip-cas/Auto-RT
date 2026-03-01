@@ -1,0 +1,72 @@
+
+output_dir: ./output/redteam_ppo
+run_name: redteam_attack_v1
+logging_dir: ./logs
+logging_steps: 10
+save_steps: 100
+save_total_limit: 5
+
+
+model_name_or_path:   # Attack model (policy)
+reward_model_path:   # For reward model
+rewrite_model_path:   # Rewrite model path
+target_model_path:   # Target model path
+downgrade_model_path:   # Downgrade model path
+
+
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+num_ppo_epochs: 4
+learning_rate: 1.0e-6
+lr_scheduler_type: cosine
+warmup_steps: 100
+max_grad_norm: 1.0
+
+
+response_length: 128
+temperature: 1.0
+kl_coef: 0.05
+cliprange: 0.2
+vf_coef: 0.1
+cliprange_value: 0.2
+gamma: 1.0
+lam: 0.95
+whiten_rewards: true
+num_mini_batches: 4
+
+
+total_episodes: 10000
+num_sample_generations: 10 
+
+
+diversity_model: sentence-transformers/all-MiniLM-L6-v2
+diversity_threshold: 0.85  # Lower = more strict filtering
+diversity_history_size: 1000
+
+
+sglang_endpoint: http://localhost:30000
+consistency_judge_model: default
+safety_judge_model: default
+max_judge_requests: 100000
+judge_timeout: 30
+
+
+rewrite_batch_size: 8
+target_batch_size: 8
+
+
+diversity_penalty: 1.0  
+consistency_penalty: 0.5  
+downgrade_safe_reward: 1.0  
+target_safe_reward: 1.0  
+
+
+bf16: true
+fp16: false
+
+
+seed: 42
+gradient_checkpointing: true
+report_to: wandb 
+hub_model_id: null 
+push_to_hub: false

@@ -1,0 +1,84 @@
+- sections:
+  - local: index
+    title: TRL
+  - local: installation
+    title: Installation
+  - local: quickstart
+    title: Quickstart
+  - local: clis
+    title: Get started with Command Line Interfaces (CLIs)
+  - local: dataset_formats
+    title: Dataset Formats
+  - local: how_to_train
+    title: PPO Training FAQ
+  - local: use_model
+    title: Use Trained Models
+  - local: customization
+    title: Customize the Training
+  - local: logging
+    title: Understanding Logs
+  title: Get started
+- sections:
+  - sections: # Sort alphabetically
+    - local: alignprop_trainer
+      title: AlignProp
+    - local: bco_trainer
+      title: BCO
+    - local: cpo_trainer
+      title: CPO
+    - local: ddpo_trainer
+      title: DDPO
+    - local: dpo_trainer
+      title: DPO
+    - local: online_dpo_trainer
+      title: Online DPO
+    - local: gkd_trainer
+      title: GKD
+    - local: kto_trainer
+      title: KTO
+    - local: nash_md_trainer
+      title: Nash-MD
+    - local: orpo_trainer
+      title: ORPO
+    - local: ppo_trainer
+      title: PPO
+    - local: reward_trainer
+      title: Reward
+    - local: rloo_trainer
+      title: RLOO
+    - local: sft_trainer
+      title: SFT
+    - local: iterative_sft_trainer
+      title: Iterative SFT
+    - local: xpo_trainer
+      title: XPO
+    title: Trainers
+  - local: models
+    title: Model Classes
+  - local: best_of_n
+    title: Best of N Sampling
+  - local: judges
+    title: Judges
+  - local: callbacks
+    title: Callbacks
+  - local: data_utils
+    title: Data Utilities
+  - local: text_environments
+    title: Text Environments
+  title: API
+- sections:
+  - local: example_overview
+    title: Example Overview
+  - local: sentiment_tuning
+    title: Sentiment Tuning
+  - local: lora_tuning_peft
+    title: Training with PEFT
+  - local: detoxifying_a_lm
+    title: Detoxifying a Language Model
+  - local: using_llama_models
+    title: Training StackLlama
+  - local: learning_tools
+    title: Learning to Use Tools
+  - local: multi_adapter_rl
+    title: Multi Adapter RLHF
+  title: Examples
